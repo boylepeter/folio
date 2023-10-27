@@ -50,3 +50,39 @@ body {
     margin-bottom: 15%;
     text-decoration: underline;
 }
+
+#contentBox {
+    background-color: white;
+    z-index: 4;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    /* opacity: 95%; */
+    border-radius: 10px;
+}
+
+#contentContainer {
+    font-family: 'Comfortaa', cursive;
+    margin-top: 14%;
+}
+
+#closeContent {
+    margin-top: 3%;
+    margin-left: 1%;
+}
+
+.hide {
+    display: none;
+}
+
+.table img {
+    height: 30px;
+    width: auto;
+}
+
+#tableBack {
+    background-color: rgb(91, 230, 205, 0.9);
+}
