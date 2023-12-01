@@ -2,6 +2,8 @@
 
 body {
     background-color: black;
+    margin: 0;
+    overflow: hidden;
 }
 
 #video {
@@ -66,7 +68,7 @@ body {
 
 #contentContainer {
     font-family: 'Comfortaa', cursive;
-    margin-top: 14%;
+    margin-top: 4%;
 }
 
 #closeContent {
@@ -85,4 +87,23 @@ body {
 
 #tableBack {
     background-color: rgb(91, 230, 205, 0.9);
+}
+
+#aboutImg {
+    width: auto;
+    height: 30%;
+    margin-top: 40px;
+    border-radius: 6px;
+}
+
+#mockImg {
+    width: auto;
+    height: 18%;
+    margin-top: 20%;
+    border-radius: 6px;
+
+}
+
+.contactTitle {
+    margin-top: 8%;
 }

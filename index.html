@@ -14,14 +14,13 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./style.css">
-    <title>Video Opener</title>
+    <title>Welcome</title>
 </head>
 
 <body>
     <section id="video">
         <div class="videoOverlay" onclick="closeContentBox()"></div>
-        <!-- <img src="./assets/bh.gif" alt=""> -->
-        <video src="./assets/green480.mov" muted autoplay preload></video>
+        <video src="./assets/green.mp4" muted autoplay></video>
     </section>
     <main>
         <div class="row">
@@ -59,14 +58,29 @@
             <div class="row about hide">
                 <div class="col-3"></div>
                 <div class="col-6 d-flex justify-content-center">
-                    <h1>Past Projects</h1>
+                    <h1>About</h1>
                 </div>
             </div>
             <div class="row about hide">
-                <div class="col-1"></div>
-                <div class="col-10">&emsp;</div>
+                <div class="col-3"></div>
+                <div class="col-6 d-flex justify-content-center">Shaping Tomorrow’s Tech Landscape:</div>
             </div>
-            <div class="row contact hide">
+            <hr class="about hide">
+            <div class="row about hide">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    The future of technology lies in our ability to push boundaries, bridge gaps, and remain dynamic and
+                    creative. My ongoing goal and commitment is to be at the forefront of that transformation. By leading teams to 
+                    develop solutions that not only meet but exceed expectation and convention, I aspire to shape tomorrow’s tech 
+                    landscape; one where efficiency, dynamism, and visionary thinking converge to redefine what is possible.
+                </div>
+            </div>
+            <div class="row about hide">
+                <div class="col-4"></div>
+                <div class="col-4 d-flex justify-content-center"><img id="mockImg" src="./assets/KJ-Mockup-02.jpg" alt="Integration Engineer"></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row contact contactTitle hide">
                 <div class="col-3"></div>
                 <div class="col-6 d-flex justify-content-center">
                     <h1>Contact</h1>
@@ -91,7 +105,8 @@
                             </tr>
                             <tr>
                                 <th><span class="material-symbols-outlined">post_add</span></th>
-                                <td colspan="2"><a href="./assets/peterBoyleResume.pdf" download>Download Resume</a></td>
+                                <td colspan="2"><a href="./assets/peterBoyleResume.pdf" download>Download Resume</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -101,6 +116,7 @@
         </div>
     </div>
     <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
         crossorigin="anonymous"></script>
