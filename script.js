@@ -10,33 +10,32 @@ let newsString = '';
 
 var width, containerwidth, left;
 
-const callForNews = async () => {
-    let articleCount = 0;
-    const news = await fetch(endpoint).then((res) => {
-        return res.json()
-    }).catch((e) => {
-        console.log(e)
-    });
-    console.log(news)
-    news.articles.forEach((article) => {
-        newsString += ` ${article.description.replace(/\s+/g,' ').trim()} - ${article.author.replace(/\s+/g,' ').trim()}  ::  `;
-        articleCount++
-        if (articleCount == news.articles.length){
-            populateNews(newsString);
-        }
-    });
-};
-callForNews();
+// const callForNews = async () => {
+//     let articleCount = 0;
+//     const news = await fetch(endpoint).then((res) => {
+//         return res.json()
+//     }).catch((e) => {
+//         console.log(e)
+//     });
+//     console.log(news)
+//     news.articles.forEach((article) => {
+//         newsString += ` ${article.description.replace(/\s+/g,' ').trim()} - ${article.author.replace(/\s+/g,' ').trim()}  ::  `;
+//         articleCount++
+//         if (articleCount == news.articles.length){
+//             populateNews(newsString);
+//         }
+//     });
+// };
+// callForNews();
 
-const populateNews = (news) => {
-    tickerText.innerText = news;
-    function scrollleft() {
-        tickerText.style.left = '100%';
-        setTimeout(scrollleft, 25);
-      }
-       scrollleft();
-
-};
+// const populateNews = (news) => {
+//     tickerText.innerText = news;
+//     function scrollleft() {
+//         tickerText.style.left = '100%';
+//         setTimeout(scrollleft, 25);
+//       }
+//        scrollleft();
+// };
 
 const populateAbout = () => {
     contentBox.classList.remove('hide');
@@ -61,3 +60,29 @@ const closeContentBox = () => {
         element.classList.add('hide');
     });
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyVideos = [...document.querySelectorAll("video.lazy")];   
+    if ("IntersectionObserver" in window) {
+      let lazyVideoObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(video) {
+          if (video.isIntersecting) {
+            // for (let source in video.target.children) {
+            //   let videoSource = video.target.children[source];
+            //   if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+            //     videoSource.src = videoSource.dataset.src;
+            //   }
+            // }
+            video.target.src = video.target.dataset.src
+            video.target.load();
+            video.target.classList.remove("lazy");
+            lazyVideoObserver.unobserve(video.target);
+          }
+        });
+      });
+   
+      lazyVideos.forEach(function(lazyVideo) {
+        lazyVideoObserver.observe(lazyVideo);
+      });
+    }
+   });

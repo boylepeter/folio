@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Comfortaa:wght@300&family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Noto+Sans:wght@200&family=Ubuntu+Condensed&display=swap');
+/*  
+font-family: 'Comfortaa', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Ubuntu Condensed', sans-serif;
+  */
 
 body {
     background-color: black;
@@ -106,4 +111,8 @@ body {
 
 .contactTitle {
     margin-top: 8%;
+}
+
+.contentText { 
+    font-family: 'Noto Sans', sans-serif;
 }
