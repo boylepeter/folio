@@ -2,7 +2,9 @@ const contentBox = document.getElementById('contentBox');
 const aboutContent = document.querySelectorAll(".about");
 const contactContent = document.querySelectorAll(".contact");
 const closeContentBtn = document.getElementById("closeContent");
-const tickerContainer = document.getElementById("ticker-container")
+const contactBtn = document.getElementById("contactBtn");
+const aboutBtn = document.getElementById("aboutBtn");
+const tickerContainer = document.getElementById("ticker-container");
 const tickerText = document.getElementById("ticker-text");
 const key = `6bf1aec30e85477ca6ffa26db9adf3f6`;
 const endpoint = `https://newsapi.org/v2/everything?q=tech&apiKey=${key}`;
@@ -84,5 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
       lazyVideos.forEach(function(lazyVideo) {
         lazyVideoObserver.observe(lazyVideo);
       });
+      contactBtn.classList.remove('hide');
+      aboutBtn.classList.remove('hide');
     }
    });
