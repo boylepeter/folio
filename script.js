@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
       lazyVideos.forEach(function(lazyVideo) {
         lazyVideoObserver.observe(lazyVideo);
       });
-      contactBtn.classList.remove('hide');
-      aboutBtn.classList.remove('hide');
-    }
+    };
+    contactBtn.classList.remove('hide');
+    aboutBtn.classList.remove('hide');
    });
